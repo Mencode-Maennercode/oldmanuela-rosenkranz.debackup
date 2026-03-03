@@ -371,12 +371,13 @@ img {
 
 .hero-watermark {
     position: absolute;
-    left: 20%;
-    top: 60%;
-    transform: translateY(-60%);
+    left: 15%;
+    top: 65%;
+    transform: translateY(-65%);
     z-index: 1;
     opacity: 0.08;
     pointer-events: none;
+    padding: 20px;
 }
 
 .hero-watermark img {
@@ -413,7 +414,8 @@ img {
 
 @media (max-width: 1024px) {
     .hero-watermark {
-        left: 5%;
+        left: 0;
+        padding: 30px;
     }
     
     .hero-watermark img {
@@ -424,14 +426,15 @@ img {
 @media (max-width: 768px) {
     .hero-watermark {
         position: absolute;
-        top: 18%;
+        top: 10%;
         left: 50%;
         transform: translateX(-50%);
-        opacity: 0.08;
+        opacity: 0.06;
+        padding: 40px;
     }
     
     .hero-watermark img {
-        width: 260px;
+        width: 220px;
         height: auto;
     }
 
