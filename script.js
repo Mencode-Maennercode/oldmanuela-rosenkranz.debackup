@@ -340,8 +340,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Collapsible service cards functionality
     const collapsibleCards = document.querySelectorAll('.service-card.collapsible');
+    console.log('DEBUG: Found', collapsibleCards.length, 'collapsible cards');
     
     const closeAllCards = function() {
+        console.log('DEBUG: Closing all cards');
         collapsibleCards.forEach(c => {
             const icon = c.querySelector('.expand-icon');
             const content = c.querySelector('.service-content');
