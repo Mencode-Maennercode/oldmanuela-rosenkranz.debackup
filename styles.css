@@ -510,10 +510,14 @@ img {
     font-size: clamp(1.2rem, 3vw, 1.6rem);
     color: var(--color-secondary);
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 300;
     opacity: 0;
     transform: translateY(20px);
     animation: subtitleSlideIn 1s ease-out 1s forwards;
+    text-align: center;
+    max-width: 100%;
 }
 
 @keyframes subtitleSlideIn {
@@ -568,29 +572,30 @@ img {
     margin: 0 0 20px 0;
     font-style: italic;
     position: relative;
-    padding: 0 30px;
+    padding: 0 10px;
+    display: inline-block;
 }
 
 .quote-text::before,
 .quote-text::after {
     content: '"';
     font-family: 'Crimson Pro', serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 300;
     color: var(--color-secondary);
     position: absolute;
-    line-height: 0.5;
-    opacity: 0.6;
+    line-height: 1;
+    opacity: 0.7;
 }
 
 .quote-text::before {
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: -5px;
 }
 
 .quote-text::after {
-    bottom: 0;
-    right: 0;
+    bottom: -2px;
+    right: -5px;
     content: '"';
 }
 
@@ -606,12 +611,22 @@ img {
     display: inline-block;
 }
 
-.quote-author::before,
-.quote-author::after {
-    content: '•';
+.quote-author::before {
+    content: '—';
+    margin-right: 10px;
+}
+
+.qualifications-list li::before {
+    content: '✓';
     color: var(--color-secondary);
-    margin: 0 12px;
-    opacity: 0.7;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.2em;
+    margin-left: -1.2em;
+}
+
+.qualifications-note {
+    margin-top: 25px;
 }
 
 .hero-buttons {
@@ -884,9 +899,9 @@ img {
 }
 
 .about-text {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--color-text-light);
+    color: var(--color-text);
 }
 
 .about-text p {
@@ -1227,15 +1242,19 @@ img {
 }
 
 .counseling-areas-intro {
-    font-family: 'Crimson Pro', serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--color-text);
-    margin-bottom: 30px;
-    line-height: 1.6;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    max-width: 700px;
+    margin: 0 auto 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out 0.2s;
+}
+
+.visible .counseling-areas-intro {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .counseling-tags {
@@ -1273,8 +1292,8 @@ img {
     }
 
     .counseling-areas-intro {
-        font-size: 1.1rem;
-        margin-bottom: 20px;
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
 
     .counseling-tags {
@@ -1739,8 +1758,6 @@ div.service-card.collapsible.open .service-content {
     color: var(--color-text-light);
     line-height: 1.8;
     text-align: center;
-    font-family: 'Crimson Pro', serif;
-    font-weight: 400;
 }
 
 .approach-conclusion {
